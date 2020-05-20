@@ -7,7 +7,7 @@ LATEX = pdflatex
 
 all : $(MAIN).pdf
 
-%.pdf : %.tex
+$(MAIN).pdf : $(MAIN).tex cities.tex outlines.tex
 	$(LATEX) --shell-escape $<
 
 clean :

@@ -1,8 +1,9 @@
 \listfiles
 \setcounter{errorcontextlines}{100}
 \documentclass[a4paper,draft,twoside]{article}
-
 \usepackage[margin={10mm,10mm}]{geometry}
+
+\usepackage{mercatormap}
 
 \setlength\parindent{0pt}
 
@@ -19,11 +20,17 @@
 
 \newif\ifSuppressOutlines
 \newif\ifSuppressLabels
+\newif\ifSimpleOutlines
 
 %\SuppressOutlinestrue
 %\SuppressLabelstrue
 
-\usepackage{mercatormap}
+%\SimpleOutlinestrue
+
+\colorlet{outlineColor}{green!50!black}    
+\colorlet{fillColor}{green!50!gray!20}
+\colorlet{textColor}{black}
+\colorlet{backgroundColor}{yellow!15}
 
 \mermapset{python=python3}
 
@@ -42,11 +49,6 @@
   \node[below=-.1ex,color=textColor]{\format{\mrcmarkercontents}};
 }
 
-\colorlet{outlineColor}{green!50!black}    
-\colorlet{fillColor}{green!50!gray!20}
-\colorlet{textColor}{black}
-\colorlet{backgroundColor}{yellow!15}
-
 \pagestyle{empty}
 
 \begin{document}
@@ -62,9 +64,12 @@
   \mrcclipmap
   \path[draw,line width=0.00263\textwidth,fill=backgroundColor]
     (mrcmap.south west) rectangle (mrcmap.north east);
-  \ifSuppressOutlines\else  
-    \input{outlines.tex}
-    %\input{outlines-simple.tex}
+  \ifSuppressOutlines\else
+    \ifSimpleOutlines
+      \input{outlines-simple.tex}
+    \else
+      \input{outlines.tex}
+    \fi  
   \fi  
   \ifSuppressLabels\else
     \input{cities.tex}
