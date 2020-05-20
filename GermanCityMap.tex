@@ -1,0 +1,73 @@
+\listfiles
+\setcounter{errorcontextlines}{100}
+\documentclass[a4paper,draft,twoside]{article}
+
+\usepackage[margin={10mm,10mm}]{geometry}
+
+\setlength\parindent{0pt}
+
+\usepackage[ngerman]{babel}
+\usepackage{iftex}
+\iftutex % LuaTeX, XeTeX
+  \usepackage{fontspec}
+  \setmonofont{DejaVuSansMono}[Scale=MatchUppercase]
+\else % old engines
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+  \usepackage[scaled]{DejaVuSansMono}
+\fi  
+
+\newif\ifSuppressOutlines
+\newif\ifSuppressLabels
+
+%\SuppressOutlinestrue
+%\SuppressLabelstrue
+
+\usepackage{mercatormap}
+
+\mermapset{python=python3}
+
+\mrcactivatescript
+
+\usetikzlibrary{external}
+
+\newcommand*\format[1]{\raisebox{0pt}[1ex][0pt]{\textsf{\small#1}}}
+
+\mrcnewmarkertype{xmark1}{
+  \path[fill=black] circle(.35ex);
+  \node[above=-.1ex,color=textColor]{\format{\mrcmarkercontents}};
+}
+\mrcnewmarkertype{xmark2}{
+  \path[fill=black] circle(.35ex);
+  \node[below=-.1ex,color=textColor]{\format{\mrcmarkercontents}};
+}
+
+\colorlet{outlineColor}{green!50!black}    
+\colorlet{fillColor}{green!50!gray!20}
+\colorlet{textColor}{black}
+\colorlet{backgroundColor}{yellow!15}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\tikzsetnextfilename{k_routemap}%
+
+\begin{tikzpicture}
+  \mrcmap[type=areafit,
+    west=5.7,east=15.2,south=47.1,north=55.1,
+    target=none,flex area fit=0.0263\textwidth,
+    tex width=\textwidth,tex height=\textheight
+  ]{k_routemap}
+  \mrcclipmap
+  \path[draw,line width=0.00263\textwidth,fill=backgroundColor]
+    (mrcmap.south west) rectangle (mrcmap.north east);
+  \ifSuppressOutlines\else  
+    \input{outlines.tex}
+  \fi  
+  \ifSuppressLabels\else
+    \input{cities.tex}
+  \fi
+\end{tikzpicture}
+
+\end{document}
