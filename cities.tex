@@ -177,7 +177,7 @@
 \mrcNPdef{Basel}{47.563}{7.591}
 \mrcNPdef{Lindau (Bodensee)}{47.58}{9.69}
 \mrcNPdef{Garmisch-Partenkirchen}{47.492}{11.097}                   
-\foreach \city / \name in {
+\foreach \city / \name in {%
   Flensburg,
   Sassnitz,
   Husum,
@@ -275,151 +275,150 @@
   Berchtesgaden,
   Lörrach,
   Lindau (Bodensee)/Lindau,
-  Garmisch-Partenkirchen}
-  {% Text oberhalb
-   \mrcmarker{named position=\city,type=xmark1,contents=\name}
-  }
-  \foreach \city / \name in {
-    Wismar,
-    Potsdam,
-    Frankfurt (Oder),
-    Eisenhüttenstadt,
-    Hameln,
-    Forst (Lausitz)/Forst,
-    Hoyerswerda,
-    Pirna,
-    Suhl,
-    Speyer}
-  {% Text unterhalb
-   \mrcmarker{named position=\city,type=xmark2,contents=\name}
-  }
-  % horizontal verschoben
-  \mrcmarker{named position=Frankfurt am Main,type=xmark1,%
-    contents=\makebox[3em][l]{Frankfurt am Main}}
-  \mrcmarker{named position=Neuruppin,type=xmark1,%
-    contents=\makebox[3em][l]{Neuruppin}}
-  \mrcmarker{named position=Limburg an der Lahn,type=xmark1,%
-    contents=\makebox[.75em][l]{Limburg}}
-  \mrcmarker{named position=Gießen,type=xmark1,%
-    contents=\makebox[.5em][l]{Gießen}}
-  \mrcmarker{named position=Wetzlar,type=xmark1,%
-    contents=\makebox[1em][r]{Wetzlar}}
-  \mrcmarker{named position=Greiz,type=xmark1,%
-    contents=\makebox[1em][r]{Greiz}}
-  \mrcmarker{named position=Bremen,type=xmark1,%
-    contents=\makebox[2em][l]{Bremen}}
-  \mrcmarker{named position=Bremerhaven,type=xmark1,%
-    contents=\makebox[2em][l]{Bremerhaven}}
-  \mrcmarker{named position=Cuxhaven,type=xmark2,%
-    contents=\makebox[2em][l]{Cuxhaven}}
-  \mrcmarker{named position=Wilhelmshaven,type=xmark2,%
-    contents=\makebox[4em][r]{Wilhelmshaven}}
-  \mrcmarker{named position=Emden,type=xmark1,%
-    contents=\makebox[2em][r]{Emden}}
-  \mrcmarker{named position=Glückstadt,type=xmark1,%
-    contents=\makebox[1em][l]{Glückstadt}}
-  \mrcmarker{named position=Bad Kissingen,type=xmark1,%
-    contents=\makebox[3em][l]{Bad Kissingen}}
-  \mrcmarker{named position=Coburg,type=xmark1,%
-    contents=\makebox[1em][l]{Coburg}}
-  \mrcmarker{named position=Neubrandenburg,type=xmark1,%
-    contents=\makebox[3em][l]{Neubrandenburg}}
-  \mrcmarker{named position=Darmstadt,type=xmark2,%
-    contents=\makebox[2em][l]{Darmstadt}}
-  \mrcmarker{named position=Stuttgart,type=xmark1,%
-    contents=\makebox[2em][l]{Stuttgart}}
-  \mrcmarker{named position=Freiburg im Breisgau,type=xmark1,%
-    contents=\makebox[2.5em][l]{Freiburg}}
-  \mrcmarker{named position=Esslingen,type=xmark2,%
-    contents=\makebox[1.75em][l]{Esslingen}}
-  \mrcmarker{named position=Sangerhausen,type=xmark2,%
-    contents=\makebox[4em][l]{Sangerhausen}}
-  \mrcmarker{named position=Tübingen,type=xmark2,%
-    contents=\makebox[3em][r]{Tübingen}}
-  \mrcmarker{named position=Lippstadt,type=xmark2,%
-    contents=\makebox[2em][l]{Lippstadt}}
-  \mrcmarker{named position=Heidelberg,type=xmark2,%
-    contents=\makebox[1.75em][l]{Heidelberg}}
-  \mrcmarker{named position=Ansbach,type=xmark2,%
-    contents=\makebox[2em][l]{Ansbach}}
-  \mrcmarker{named position=Mannheim,type=xmark1,%
-    contents=\makebox[0em][l]{Mannheim}}
-  \mrcmarker{named position=Pirmasens,type=xmark1,%
-    contents=\makebox[2.5em][l]{Pirmasens}}
-  \mrcmarker{named position=Bochum,type=xmark1,%
-    contents=\makebox[1.25em][r]{Bochum}}
-  \mrcmarker{named position=Dortmund,type=xmark1,%
-    contents=\makebox[1em][l]{Dortmund}}
-  \mrcmarker{named position=Leipzig,type=xmark1,%
-    contents=\makebox[2em][l]{Leipzig}}
-  \mrcmarker{named position=Halle (Saale),type=xmark1,%
-    contents=\makebox[1em][l]{Halle}}
-  \mrcmarker{named position=Dresden,type=xmark1,%
-    contents=\makebox[2em][l]{Dresden}}
-  \mrcmarker{named position=Siegen,type=xmark1,%
-    contents=\makebox[2em][l]{Siegen}}
-  \mrcmarker{named position=Pforzheim,type=xmark1,%
-    contents=\makebox[2em][l]{Pforzheim}}
-  \mrcmarker{named position=Wiesbaden,type=xmark1,%
-    contents=\makebox[1em][r]{Wiesbaden}}
-  \mrcmarker{named position=Saarbrücken,type=xmark1,%
-    contents=\makebox[4em][r]{Saarbrücken}}
-  \mrcmarker{named position=Duisburg,type=xmark2,%
-    contents=\makebox[.75em][r]{Duisburg}}
-  \mrcmarker{named position=Düsseldorf,type=xmark2,%
-    contents=\makebox[1.5em][r]{Düsseldorf}}
-  \mrcmarker{named position=Meißen,type=xmark1,%
-    contents=\makebox[1em][l]{Meißen}}
-  \mrcmarker{named position=Zwickau,type=xmark1,%
-    contents=\makebox[2em][l]{Zwickau}}
-  \mrcmarker{named position=Mainz,type=xmark2,
-    contents=\makebox[1.5em][r]{Mainz}}
-  \mrcmarker{named position=Wittenberge,type=xmark2,%
-    contents=\makebox[2.5em][l]{Wittenberge}}
-  \mrcmarker{named position=Wuppertal,type=xmark2,%
-    contents=\makebox[2.5em][l]{Wuppertal}}
-  \mrcmarker{named position=Essen,type=xmark2,%
-    contents=\makebox[1.5em][l]{Essen}}
-  \mrcmarker{named position=Hagen,type=xmark1,%
-    contents=\makebox[1em][l]{Hagen}}
-  \mrcmarker{named position=Salzgitter,type=xmark1,%
-    contents=\makebox[2em][l]{Salzgitter}}
-  \mrcmarker{named position=Stralsund,type=xmark1,%
-    contents=\makebox[3em][r]{Stralsund}}
-  \mrcmarker{named position=Hildesheim,type=xmark1,%
-    contents=\makebox[2em][r]{Hildesheim}}
-  \mrcmarker{named position=Wittenberg,type=xmark1,%
-    contents=\makebox[4em][r]{Wittenberg}}
-  \mrcmarker{named position=Oldenburg,type=xmark1,%
-    contents=\makebox[3.25em][r]{Oldenburg}}
-  \mrcmarker{named position=Lüneburg,type=xmark2,%
-    contents=\makebox[3em][l]{Lüneburg}}
-  \mrcmarker{named position=Wernigerode,type=xmark2,%
-    contents=\makebox[1.75em][r]{Wernigerode}}
-  \mrcmarker{named position=Bernau,type=xmark1,%
-    contents=\makebox[1em][l]{Bernau}}
-  \mrcmarker{named position=Oranienburg,type=xmark1,%
-    contents=\makebox[3em][r]{Oranienburg}}
-  \mrcmarker{named position=Görlitz,type=xmark2,%
-    contents=\makebox[1em][r]{Görlitz}}
-  \mrcmarker{named position=Zittau,type=xmark2,%
-    contents=\makebox[1em][r]{Zittau}}
-  \mrcmarker{named position=Quedlinburg,type=xmark2,%
-    contents=\makebox[1.75em][l]{Quedlinburg}}
-  \mrcmarker{named position=Jüterbog,type=xmark2,%
-    contents=\makebox[0em][l]{Jüterbog}}
-  \mrcmarker{named position=Guben,type=xmark2,%
-    contents=\makebox[1.75em][l]{Guben}}
-  \mrcmarker{named position=Putbus,type=xmark2,%
-    contents=\makebox[1.5em][l]{Putbus}}
-  \mrcmarker{named position=Dessau-Roßlau,type=xmark2,%
-    contents=\makebox[1.75em][l]{Dessau}}
-  \mrcmarker{named position=Halberstadt,type=xmark1,%
-    contents=\makebox[1.5em][l]{Halberstadt}}
-  \mrcmarker{named position=Küstrin-Kietz,type=xmark1,%
-    contents=\makebox[6em][l]{Küstrin-Kietz}}
-  \mrcmarker{named position=Torgau,type=xmark1,%
-    contents=\makebox[2em][l]{Torgau}}
- 
+  Garmisch-Partenkirchen}{% Centered text above
+  \mrcmarker{named position=\city,type=xmark1,contents=\name}
+}
+\foreach \city / \name in
+{%
+  Wismar,
+  Potsdam,
+  Frankfurt (Oder),
+  Eisenhüttenstadt,
+  Hameln,
+  Forst (Lausitz)/Forst,
+  Hoyerswerda,
+  Pirna,
+  Suhl,
+  Speyer}{% Centered text below
+  \mrcmarker{named position=\city,type=xmark2,contents=\name}
+}
+% Text above/below and horizontally shifted
+\mrcmarker{named position=Frankfurt am Main,type=xmark1,%
+  contents=\makebox[3em][l]{Frankfurt am Main}}
+\mrcmarker{named position=Neuruppin,type=xmark1,%
+  contents=\makebox[3em][l]{Neuruppin}}
+\mrcmarker{named position=Limburg an der Lahn,type=xmark1,%
+  contents=\makebox[.75em][l]{Limburg}}
+\mrcmarker{named position=Gießen,type=xmark1,%
+  contents=\makebox[.5em][l]{Gießen}}
+\mrcmarker{named position=Wetzlar,type=xmark1,%
+  contents=\makebox[1em][r]{Wetzlar}}
+\mrcmarker{named position=Greiz,type=xmark1,%
+  contents=\makebox[1em][r]{Greiz}}
+\mrcmarker{named position=Bremen,type=xmark1,%
+  contents=\makebox[2em][l]{Bremen}}
+\mrcmarker{named position=Bremerhaven,type=xmark1,%
+  contents=\makebox[2em][l]{Bremerhaven}}
+\mrcmarker{named position=Cuxhaven,type=xmark2,%
+  contents=\makebox[2em][l]{Cuxhaven}}
+\mrcmarker{named position=Wilhelmshaven,type=xmark2,%
+  contents=\makebox[4em][r]{Wilhelmshaven}}
+\mrcmarker{named position=Emden,type=xmark1,%
+  contents=\makebox[2em][r]{Emden}}
+\mrcmarker{named position=Glückstadt,type=xmark1,%
+  contents=\makebox[1em][l]{Glückstadt}}
+\mrcmarker{named position=Bad Kissingen,type=xmark1,%
+  contents=\makebox[3em][l]{Bad Kissingen}}
+\mrcmarker{named position=Coburg,type=xmark1,%
+  contents=\makebox[1em][l]{Coburg}}
+\mrcmarker{named position=Neubrandenburg,type=xmark1,%
+  contents=\makebox[3em][l]{Neubrandenburg}}
+\mrcmarker{named position=Darmstadt,type=xmark2,%
+  contents=\makebox[2em][l]{Darmstadt}}
+\mrcmarker{named position=Stuttgart,type=xmark1,%
+  contents=\makebox[2em][l]{Stuttgart}}
+\mrcmarker{named position=Freiburg im Breisgau,type=xmark1,%
+  contents=\makebox[2.5em][l]{Freiburg}}
+\mrcmarker{named position=Esslingen,type=xmark2,%
+  contents=\makebox[1.75em][l]{Esslingen}}
+\mrcmarker{named position=Sangerhausen,type=xmark2,%
+  contents=\makebox[4em][l]{Sangerhausen}}
+\mrcmarker{named position=Tübingen,type=xmark2,%
+  contents=\makebox[3em][r]{Tübingen}}
+\mrcmarker{named position=Lippstadt,type=xmark2,%
+  contents=\makebox[2em][l]{Lippstadt}}
+\mrcmarker{named position=Heidelberg,type=xmark2,%
+  contents=\makebox[1.75em][l]{Heidelberg}}
+\mrcmarker{named position=Ansbach,type=xmark2,%
+  contents=\makebox[2em][l]{Ansbach}}
+\mrcmarker{named position=Mannheim,type=xmark1,%
+  contents=\makebox[0em][l]{Mannheim}}
+\mrcmarker{named position=Pirmasens,type=xmark1,%
+  contents=\makebox[2.5em][l]{Pirmasens}}
+\mrcmarker{named position=Bochum,type=xmark1,%
+  contents=\makebox[1.25em][r]{Bochum}}
+\mrcmarker{named position=Dortmund,type=xmark1,%
+  contents=\makebox[1em][l]{Dortmund}}
+\mrcmarker{named position=Leipzig,type=xmark1,%
+  contents=\makebox[2em][l]{Leipzig}}
+\mrcmarker{named position=Halle (Saale),type=xmark1,%
+  contents=\makebox[1em][l]{Halle}}
+\mrcmarker{named position=Dresden,type=xmark1,%
+  contents=\makebox[2em][l]{Dresden}}
+\mrcmarker{named position=Siegen,type=xmark1,%
+  contents=\makebox[2em][l]{Siegen}}
+\mrcmarker{named position=Pforzheim,type=xmark1,%
+  contents=\makebox[2em][l]{Pforzheim}}
+\mrcmarker{named position=Wiesbaden,type=xmark1,%
+  contents=\makebox[1em][r]{Wiesbaden}}
+\mrcmarker{named position=Saarbrücken,type=xmark1,%
+  contents=\makebox[4em][r]{Saarbrücken}}
+\mrcmarker{named position=Duisburg,type=xmark2,%
+  contents=\makebox[.75em][r]{Duisburg}}
+\mrcmarker{named position=Düsseldorf,type=xmark2,%
+  contents=\makebox[1.5em][r]{Düsseldorf}}
+\mrcmarker{named position=Meißen,type=xmark1,%
+  contents=\makebox[1em][l]{Meißen}}
+\mrcmarker{named position=Zwickau,type=xmark1,%
+  contents=\makebox[2em][l]{Zwickau}}
+\mrcmarker{named position=Mainz,type=xmark2,
+  contents=\makebox[1.5em][r]{Mainz}}
+\mrcmarker{named position=Wittenberge,type=xmark2,%
+  contents=\makebox[2.5em][l]{Wittenberge}}
+\mrcmarker{named position=Wuppertal,type=xmark2,%
+  contents=\makebox[2.5em][l]{Wuppertal}}
+\mrcmarker{named position=Essen,type=xmark2,%
+  contents=\makebox[1.5em][l]{Essen}}
+\mrcmarker{named position=Hagen,type=xmark1,%
+  contents=\makebox[1em][l]{Hagen}}
+\mrcmarker{named position=Salzgitter,type=xmark1,%
+  contents=\makebox[2em][l]{Salzgitter}}
+\mrcmarker{named position=Stralsund,type=xmark1,%
+  contents=\makebox[3em][r]{Stralsund}}
+\mrcmarker{named position=Hildesheim,type=xmark1,%
+  contents=\makebox[2em][r]{Hildesheim}}
+\mrcmarker{named position=Wittenberg,type=xmark1,%
+  contents=\makebox[4em][r]{Wittenberg}}
+\mrcmarker{named position=Oldenburg,type=xmark1,%
+  contents=\makebox[3.25em][r]{Oldenburg}}
+\mrcmarker{named position=Lüneburg,type=xmark2,%
+  contents=\makebox[3em][l]{Lüneburg}}
+\mrcmarker{named position=Wernigerode,type=xmark2,%
+  contents=\makebox[1.75em][r]{Wernigerode}}
+\mrcmarker{named position=Bernau,type=xmark1,%
+  contents=\makebox[1em][l]{Bernau}}
+\mrcmarker{named position=Oranienburg,type=xmark1,%
+  contents=\makebox[3em][r]{Oranienburg}}
+\mrcmarker{named position=Görlitz,type=xmark2,%
+  contents=\makebox[1em][r]{Görlitz}}
+\mrcmarker{named position=Zittau,type=xmark2,%
+  contents=\makebox[1em][r]{Zittau}}
+\mrcmarker{named position=Quedlinburg,type=xmark2,%
+  contents=\makebox[1.75em][l]{Quedlinburg}}
+\mrcmarker{named position=Jüterbog,type=xmark2,%
+  contents=\makebox[0em][l]{Jüterbog}}
+\mrcmarker{named position=Guben,type=xmark2,%
+  contents=\makebox[1.75em][l]{Guben}}
+\mrcmarker{named position=Putbus,type=xmark2,%
+  contents=\makebox[1.5em][l]{Putbus}}
+\mrcmarker{named position=Dessau-Roßlau,type=xmark2,%
+  contents=\makebox[1.75em][l]{Dessau}}
+\mrcmarker{named position=Halberstadt,type=xmark1,%
+  contents=\makebox[1.5em][l]{Halberstadt}}
+\mrcmarker{named position=Küstrin-Kietz,type=xmark1,%
+  contents=\makebox[6em][l]{Küstrin-Kietz}}
+\mrcmarker{named position=Torgau,type=xmark1,%
+  contents=\makebox[2em][l]{Torgau}}
+
 
 \endinput
