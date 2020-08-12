@@ -1,6 +1,6 @@
 
 \mrcNPdef{Westerland}{54.917}{8.3}  
-\mrcNPdef{Flensburg}{54.78}{9.433}  
+\mrcNPdef{Flensburg}{54.78}{9.433}
 \mrcNPdef{Sassnitz}{54.516}{13.644}
 \mrcNPdef{Husum}{54.485}{9.054}
 \mrcNPdef{Putbus}{54.351}{13.473}
@@ -27,6 +27,7 @@
 \mrcNPdef{Wilhelmshaven}{53.528}{8.106}
 \mrcNPdef{Waren (Müritz)}{53.514}{12.686}
 \mrcNPdef{Buxtehude}{53.483}{9.700}
+\mrcNPdef{Aurich}{53.467}{7.483}
 \mrcNPdef{Parchim}{53.429}{11.850}
 \mrcNPdef{Lauenburg}{53.376}{10.555}
 \mrcNPdef{Emden}{53.366}{7.206}
@@ -134,7 +135,8 @@
 \mrcNPdef{Naumburg (Saale)}{51.154}{11.812}
 \mrcNPdef{Görlitz}{51.15}{14.99}
 \mrcNPdef{Dresden}{51.05}{13.73}
-\mrcNPdef{Leverkusen}{51.033}{7.000} 
+\mrcNPdef{Leverkusen}{51.033}{7.000}
+\mrcNPdef{Weimar}{50.989}{11.325}  
 \mrcNPdef{Altenburg}{50.985}{12.433}
 \mrcNPdef{Eisenach}{50.983}{10.316}
 \mrcNPdef{Erfurt}{50.978}{11.028}
@@ -226,7 +228,6 @@
   Sassnitz,
   Husum,
   Kiel,
-  Rostock,
   Greifswald,
   Neumünster,
   Lübeck,
@@ -271,14 +272,12 @@
   Eschwege,
   Altenburg,
   Eisenach,
-  Erfurt,
   Jena,
   Freiberg,
   Bad Hersfeld,
   Gera,
   Chemnitz,
   Marburg,
-  Bonn,
   Ilmenau,
   Fulda,
   Sonneberg,
@@ -311,7 +310,6 @@
 }
 \foreach \city / \name in
 {%
-  Flensburg,
   Wismar,
   Salzwedel,
   Potsdam,
@@ -326,7 +324,7 @@
   Hof,
   Kulmbach,
   Bayreuth,
-  Baden-Baden,
+  Bonn,
   Speyer,
   Lindau (Bodensee)/Lindau}{% Centered text below
   \mrcmarker{named position=\city,type=xmark2,contents=\name}
@@ -366,6 +364,8 @@
   contents=\makebox[2em][l]{Braunschweig}}
 \mrcmarker{named position=Buxtehude,type=xmark2,%
   contents=\makebox[2.25em][r]{Buxtehude}}
+\mrcmarker{named position=Aurich,type=xmark1,%
+  contents=\makebox[3em][l]{Aurich}}
 \mrcmarker{named position=Bremen,type=xmark1,%
   contents=\makebox[2em][l]{Bremen}}
 \mrcmarker{named position=Bremerhaven,type=xmark1,%
@@ -373,9 +373,9 @@
 \mrcmarker{named position=Cuxhaven,type=xmark2,%
   contents=\makebox[2em][l]{Cuxhaven}}
 \mrcmarker{named position=Wilhelmshaven,type=xmark2,%
-  contents=\makebox[4em][r]{Wilhelmshaven}}
-\mrcmarker{named position=Emden,type=xmark1,%
-  contents=\makebox[2em][r]{Emden}}
+  contents=\makebox[4em][l]{Wilhelmshaven}}
+\mrcmarker{named position=Emden,type=xmark2,%
+  contents=\makebox[-0.5em][l]{Emden}}
 \mrcmarker{named position=Glückstadt,type=xmark1,%
   contents=\makebox[1em][l]{Glückstadt}}
 \mrcmarker{named position=Bad Kissingen,type=xmark1,%
@@ -440,6 +440,10 @@
   contents=\makebox[-0.5em][l]{Bocholt}}
 \mrcmarker{named position=Aachen,type=xmark1,%
   contents=\makebox[0em][l]{Aachen}}
+\mrcmarker{named position=Weimar,type=xmark1,%
+  contents=\makebox[0em][r]{Weimar}}
+\mrcmarker{named position=Erfurt,type=xmark2,%
+  contents=\makebox[1.5em][r]{Erfurt}}
 \mrcmarker{named position=Lippstadt,type=xmark2,%
   contents=\makebox[2em][l]{Lippstadt}}
 \mrcmarker{named position=Arnsberg,type=xmark1,%
@@ -480,8 +484,8 @@
   contents=\makebox[1em][r]{Wiesbaden}}
 \mrcmarker{named position=Leverkusen,type=xmark1,%
   contents=\makebox[0em][l]{Leverkusen}}
-\mrcmarker{named position=Köln,type=xmark1,%
-  contents=\makebox[0em][r]{Köln}}
+\mrcmarker{named position=Köln,type=xmark2,%
+  contents=\makebox[-0.5em][l]{Köln}}
 \mrcmarker{named position=Saarbrücken,type=xmark2,%
   contents=\makebox[3.25em][l]{Saarbrücken}}
 \mrcmarker{named position=Saarlouis,type=xmark1,%
@@ -495,7 +499,7 @@
 \mrcmarker{named position=Meißen,type=xmark1,%
   contents=\makebox[1em][l]{Meißen}}
 \mrcmarker{named position=Naumburg (Saale),type=xmark2,%
-  contents=\makebox[2.5em][r]{Naumburg}}
+  contents=\makebox[3.1em][r]{Naumburg}}
 \mrcmarker{named position=Zwickau,type=xmark2,%
   contents=\makebox[2em][l]{Zwickau}}
 \mrcmarker{named position=Plauen,type=xmark1,%
@@ -552,6 +556,12 @@
   contents=\makebox[2em][r]{Torgau}}
 \mrcmarker{named position=Friedrichshafen,type=xmark1,%
   contents=\makebox[0em][l]{Friedrichshafen}}
+\mrcmarker{named position=Baden-Baden,type=xmark2,%
+  contents=\makebox[4em][l]{Baden-Baden}}
+\mrcmarker{named position=Rostock,type=xmark2,%
+  contents=\makebox[2.5em][l]{Rostock}}
+\mrcmarker{named position=Flensburg,type=xmark2,%
+  contents=\makebox[2.5em][l]{Flensburg}}
 
 
 \endinput
