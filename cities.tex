@@ -232,7 +232,8 @@
 \mrcNPdef{Lörrach}{47.616}{7.659}
 \mrcNPdef{Basel}{47.563}{7.591}
 \mrcNPdef{Lindau (Bodensee)}{47.58}{9.69}
-\mrcNPdef{Garmisch-Partenkirchen}{47.492}{11.097}                   
+\mrcNPdef{Garmisch-Partenkirchen}{47.492}{11.097}
+\mrcNPdef{Oberstdorf}{47.417}{10.283}                
 \foreach \city / \name in {%
   Westerland,
   Sassnitz,
@@ -311,8 +312,7 @@
   %Kempten (Allgäu)/Kempten,
   Konstanz,
   Berchtesgaden,
-  Lörrach,
-  Garmisch-Partenkirchen}{% Centered text above
+  Lörrach}{% Centered text above
   \mrcmarker{named position=\city,type=xmark1,contents=\name}
 }
 \foreach \city / \name in
@@ -332,8 +332,7 @@
   Kulmbach,
   Bayreuth,
   Bonn,
-  Speyer,
-  Lindau (Bodensee)/Lindau}{% Centered text below
+  Speyer}{% Centered text below
   \mrcmarker{named position=\city,type=xmark2,contents=\name}
 }
 % Text above/below and horizontally shifted
@@ -593,5 +592,11 @@
   contents=\makebox[0.5em][l]{Forchheim}}
 \mrcmarker{named position=Dinkelsbühl,type=xmark1,%
   contents=\makebox[1em][l]{Dinkelsbühl}}
-      
+\mrcmarker{named position=Lindau (Bodensee),type=xmark2,%
+  contents=\makebox[1.5em][r]{Lindau}}
+\mrcmarker{named position=Oberstdorf,type=xmark1,%
+  contents=\makebox[4em][r]{Oberstdorf}}
+\mrcmarker{named position=Garmisch-Partenkirchen,type=xmark1,%
+  contents=\makebox[5em][l]{Garmisch-Partenkirchen}}
+ 
 \endinput
